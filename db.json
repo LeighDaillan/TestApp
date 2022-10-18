@@ -1,0 +1,92 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "category": "Food",
+      "date": "May 25",
+      "description": "Description 1",
+      "title": "Food Festival"
+    },
+    {
+      "id": 2,
+      "category": "Food",
+      "date": "May 25",
+      "description": "Description 2",
+      "title": "Food Festival"
+    },
+    {
+      "id": 3,
+      "category": "Food",
+      "date": "May 25",
+      "description": "Description 3",
+      "title": "Food Festival"
+    },
+    {
+      "id": 4,
+      "category": "Food",
+      "date": "May 25",
+      "description": "Description 4",
+      "title": "Food Festival"
+    },
+    {
+      "id": 5,
+      "category": "Sports",
+      "date": "May 25",
+      "description": "Description 5",
+      "title": "Sports Festival"
+    },
+    {
+      "id": 6,
+      "category": "Sports",
+      "date": "May 25",
+      "description": "Description 6",
+      "title": "Sports Festival"
+    }
+  ],
+  "dashboard": {
+    "posts": 962,
+    "likes": 5935,
+    "followers": 5489,
+    "following": 569
+  },
+  "news": [
+    {
+      "id": 1,
+      "title": "News Article 1",
+      "description": "Description 1",
+      "category": "sports"
+    },
+    {
+      "id": 2,
+      "title": "News Article 2",
+      "description": "Description 2",
+      "category": "politics"
+    },
+    {
+      "id": 3,
+      "title": "News Article 3",
+      "description": "Description 3",
+      "category": "sports"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Product 1",
+      "price": 500,
+      "description": "Description 1"
+    },
+    {
+      "id": 2,
+      "title": "Product 2",
+      "price": 500,
+      "description": "Description 2"
+    },
+    {
+      "id": 3,
+      "title": "Product 3",
+      "price": 500,
+      "description": "Description 3"
+    }
+  ]
+}
