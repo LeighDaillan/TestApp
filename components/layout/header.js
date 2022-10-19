@@ -1,10 +1,23 @@
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 const Header = function () {
   const { data: session, status } = useSession();
+  const { push, asPath } = useRouter();
+
+  const handleSignout = async function () {
+    const data = await signOut({ redirect: false, callbackUrl: "/" });
+
+    push(data.url);
+  };
+
+  const handleSignin = function () {
+    push(`/authentication/signin?callbackUrl=${asPath}`);
+  };
+
   return (
-    <nav className="text-center font-Montserrat font-bold my-5">
+    <nav className="text-center font-bold my-5">
       <span className="text-5xl text-red-500">N</span>
       <span className="text-2xl">
         ews <span className="text-5xl text-red-500">B</span>log
@@ -35,31 +48,13 @@ const Header = function () {
 
           {status === "unauthenticated" && (
             <li className="px-5 py-2">
-              <Link href="/api/auth/signin">
-                <a
-                  onClick={(e) => {
-                    e.preventDefault();
-                    signIn();
-                  }}
-                >
-                  SIGN IN
-                </a>
-              </Link>
+              <button onClick={handleSignin}>SIGN IN</button>
             </li>
           )}
 
           {status === "authenticated" && (
             <li className="px-5 py-2">
-              <Link href="/api/auth/signout">
-                <a
-                  onClick={(e) => {
-                    e.preventDefault();
-                    signOut();
-                  }}
-                >
-                  SIGN OUT
-                </a>
-              </Link>
+              <button onClick={handleSignout}>SIGN OUT</button>
             </li>
           )}
         </ul>
