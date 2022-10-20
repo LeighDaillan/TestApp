@@ -20,4 +20,4 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps() {}
+// export async function getStaticProps() {}
